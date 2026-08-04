@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Najma Khonsa Tsabita | Portfolio</title>
+<meta name="description" content="Portfolio of Najma Khonsa Tsabita, an Information Systems student at Universitas Bakrie skilled in Business Intelligence, UI/UX Design, Data Analytics, GIS, and Application Development."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- AURORA CANVAS -->
+<canvas id="aurora-canvas"></canvas>
+
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════ -->
+<nav id="main-nav">
+  <a href="#home" class="nav-logo">
+    <span class="nav-logo-dot"></span>
+    NKT.
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#roles" class="nav-link">Roles</a></li>
+    <li><a href="#skills" class="nav-link">Skills</a></li>
+    <li><a href="#experience" class="nav-link">Experience</a></li>
+    <li class="nav-dropdown">
+      <a href="#projects" class="nav-link">Projects</a>
+      <div class="dropdown-menu">
+        <a href="#cat-bi-analytics">BI & Analytics</a>
+        <a href="#cat-application">Application Dev</a>
+        <a href="#cat-gis">GIS & Mapping</a>
+        <a href="#cat-business">Business</a>
+        <a href="#cat-process">Process & BPMN</a>
+        <a href="#cat-research">Research</a>
+      </div>
+    </li>
+    <li><a href="#education" class="nav-link">Education</a></li>
+    <li><a href="#organization" class="nav-link">Organizations</a></li>
+    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="theme-btn">
+      <span class="theme-icon" id="theme-icon">☀️</span>
+      <span id="theme-label">Light</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#home" onclick="closeMobileNav()">Home</a>
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#roles" onclick="closeMobileNav()">Roles</a>
+  <a href="#skills" onclick="closeMobileNav()">Skills</a>
+  <a href="#experience" onclick="closeMobileNav()">Experience</a>
+  <a href="#projects" onclick="closeMobileNav()">Projects</a>
+  <a href="#education" onclick="closeMobileNav()">Education</a>
+  <a href="#organization" onclick="closeMobileNav()">Organizations</a>
+  <a href="#certifications" onclick="closeMobileNav()">Certifications</a>
+  <a href="#gallery" onclick="closeMobileNav()">Gallery</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+</div>
+
+<main>
+
+<!-- ═══════════════════════════════════════
+     HERO
+═══════════════════════════════════════ -->
+<section id="home" style="position:relative">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge reveal">
+        <span class="badge-pulse"></span>
+        Information Systems · Universitas Bakrie
+      </div>
+      <h1 class="hero-name reveal reveal-delay-1">
+        <span class="grad-text">Najma</span><br>Khonsa
+      </h1>
+      <div class="hero-name-sub reveal reveal-delay-2">Tsabita</div>
+      <!-- Typing effect inserts here -->
+      <p class="hero-desc reveal reveal-delay-3">
+        IS undergraduate passionate about <strong>business intelligence</strong>, <strong>UI/UX design</strong>,
+        <strong>data visualization</strong>, and <strong>system analysis</strong>. Building things that are
+        both functional and beautiful.
+      </p>
+      <div class="hero-stats reveal reveal-delay-3">
+        <div class="stat-item">
+          <span class="stat-num" data-count="3.85" data-decimals="2">0</span>
+          <span class="stat-label">GPA / 4.00</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="5" data-suffix="+">0</span>
+          <span class="stat-label">Experiences</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="2">0</span>
+          <span class="stat-label">BNSP Certs</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">6th</span>
+          <span class="stat-label">Semester</span>
+        </div>
+      </div>
+      <div class="hero-actions reveal reveal-delay-4">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+        <a href="asset/document/cv/juli.pdf" download class="btn-outline">Download CV</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap reveal reveal-delay-2">
+      <div class="hero-photo-ring2"></div>
+      <div class="hero-photo-ring"></div>
+      <img src="asset/images/foto_najma_nobg.png" alt="Najma Khonsa Tsabita" class="hero-photo"/>
+      <div class="hero-photo-deco">GPA 3.85 / 4.00</div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    scroll
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     ABOUT / BIODATA
+═══════════════════════════════════════ -->
+<section id="about">
+  <div class="section">
+    <div class="section-label">Biodata</div>
+    <h2 class="section-title">About <span class="grad-text">Me</span></h2>
+    <div class="about-grid">
+      <div class="glass-card about-card reveal">
+        <div class="about-name">Najma Khonsa Tsabita</div>
+        <p class="about-bio">
+          Information Systems undergraduate at Universitas Bakrie, currently in Semester 6 (Angkatan 2023).
+          With a background in multimedia from SMK, I bridge the gap between aesthetics and technology,
+          designing systems that are efficient, and interfaces that are intuitive and beautiful.
+        </p>
+        <div class="about-row">
+          <div class="about-field">
+            <div class="field-icon">📍</div>
+            <div>
+              <span class="field-label">Location</span>
+              <span class="field-val">South Tangerang, Indonesia</span>
+            </div>
+          </div>
+          <div class="about-field">
+            <div class="field-icon">🎓</div>
+            <div>
+              <span class="field-label">Program</span>
+              <span class="field-val">S1 – Sistem Informasi, Universitas Bakrie</span>
+            </div>
+          </div>
+          <div class="about-field">
+            <div class="field-icon">📧</div>
+            <div>
+              <span class="field-label">Email</span>
+              <span class="field-val">najmakhonsa@gmail.com</span>
+            </div>
+          </div>
+          <div class="about-field">
+            <div class="field-icon">📱</div>
+            <div>
+              <span class="field-label">Phone / WhatsApp</span>
+              <span class="field-val">+62 895 3794 16677</span>
+            </div>
+          </div>
+          <div class="about-field">
+            <div class="field-icon">🔗</div>
+            <div>
+              <span class="field-label">LinkedIn</span>
+              <span class="field-val">linkedin.com/in/najma-khonsa-tsabita</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="mailto:najmakhonsa@gmail.com" class="btn-primary" style="font-size:0.84rem;padding:11px 22px">Send Email</a>
+          <a href="https://linkedin.com/in/najma-khonsa-tsabita" target="_blank" class="btn-outline" style="font-size:0.84rem;padding:10px 22px">LinkedIn</a>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="glass-card gpa-card reveal reveal-delay-1">
+          <div class="gpa-num">3.85</div>
+          <div class="gpa-label">Indeks Prestasi Kumulatif · 159 SKS</div>
+          <div class="gpa-bar-wrap"><div class="gpa-bar" id="gpa-bar"></div></div>
+        </div>
+        <div class="glass-card cert-card reveal reveal-delay-2">
+          <div class="cert-title">🏅 Professional Certifications</div>
+          <ul class="cert-list">
+            <li><span class="cert-dot"></span>BNSP · Junior Graphic Designer</li>
+            <li><span class="cert-dot"></span>BNSP · Business Intelligence Analyst</li>
+          </ul>
+        </div>
+        <div class="glass-card cert-card reveal reveal-delay-3">
+          <div class="cert-title">🌐 Languages & Interests</div>
+          <ul class="cert-list">
+            <li><span class="cert-dot"></span>Bahasa Indonesia (Native)</li>
+            <li><span class="cert-dot"></span>English (Intermediate)</li>
+            <li><span class="cert-dot"></span>UI/UX Design · Data Analytics</li>
+            <li><span class="cert-dot"></span>Creative Content · Business Intelligence</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     ROLES I CAN FILL
+═══════════════════════════════════════ -->
+<section id="roles">
+  <div class="section">
+    <div class="section-label">What I Can Do</div>
+    <h2 class="section-title">Roles I Can <span class="grad-text">Fill</span></h2>
+    <div class="roles-grid">
+      <div class="glass-card role-card reveal">
+        <div class="role-icon">📊</div>
+        <h3 class="role-title">Business Intelligence Analyst</h3>
+        <p class="role-desc">Building dashboards, performing data-driven analysis, clustering, and star-schema modeling to support strategic decisions.</p>
+      </div>
+      <div class="glass-card role-card reveal reveal-delay-1">
+        <div class="role-icon">🎨</div>
+        <h3 class="role-title">UI/UX Designer</h3>
+        <p class="role-desc">Designing user-centered interfaces for mobile and web applications with a focus on usability, visual appeal, and seamless interaction.</p>
+      </div>
+      <div class="glass-card role-card reveal reveal-delay-2">
+        <div class="role-icon">💻</div>
+        <h3 class="role-title">Application Developer</h3>
+        <p class="role-desc">Developing desktop and mobile applications using VB.Net, Java, and web technologies, from concept to testing and deployment.</p>
+      </div>
+      <div class="glass-card role-card reveal reveal-delay-3">
+        <div class="role-icon">📈</div>
+        <h3 class="role-title">Data Analyst</h3>
+        <p class="role-desc">Cleaning, visualizing, and interpreting data to uncover patterns and deliver reports that inform real business decisions.</p>
+      </div>
+      <div class="glass-card role-card reveal">
+        <div class="role-icon">🗺️</div>
+        <h3 class="role-title">GIS Analyst</h3>
+        <p class="role-desc">Creating geographic information systems and spatial analysis using QGIS: buffer analysis, proximity analysis, and risk mapping for location-based insights.</p>
+      </div>
+      <div class="glass-card role-card reveal reveal-delay-1">
+        <div class="role-icon">🔄</div>
+        <h3 class="role-title">Business Process Analyst</h3>
+        <p class="role-desc">Mapping, analyzing, and redesigning business processes using BPMN 2.0 and flowchart methodologies for operational improvement.</p>
+      </div>
+      <div class="glass-card role-card reveal reveal-delay-2">
+        <div class="role-icon">✅</div>
+        <h3 class="role-title">Quality Assurance Staff</h3>
+        <p class="role-desc">Experienced in institutional quality assurance: managing quality documents, manual standards, e-monitoring, and compliance processes at university level.</p>
+      </div>
+      <div class="glass-card role-card reveal reveal-delay-3">
+        <div class="role-icon">🚀</div>
+        <h3 class="role-title">Project Coordinator</h3>
+        <p class="role-desc">Organizing team workflows, managing deliverables, coordinating events, and ensuring projects hit their milestones on time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     SKILLS
+═══════════════════════════════════════ -->
+<section id="skills">
+  <div class="section">
+    <div class="section-label">Competencies</div>
+    <h2 class="section-title">Skills & <span class="grad-text">Tools</span></h2>
+    <div class="skills-grid">
+      <div class="glass-card skill-category reveal">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🎨</div>
+          <div class="skill-cat-name">Design</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">UI/UX Design</span>
+          <span class="skill-tag">Graphic Design</span>
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">CorelDraw</span>
+          <span class="skill-tag">Canva</span>
+          <span class="skill-tag">CapCut</span>
+        </div>
+      </div>
+      <div class="glass-card skill-category reveal reveal-delay-1">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">📊</div>
+          <div class="skill-cat-name">Data & BI</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Data Visualization</span>
+          <span class="skill-tag">Business Intelligence</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">AIRPM</span>
+          <span class="skill-tag">Python</span>
+        </div>
+      </div>
+      <div class="glass-card skill-category reveal reveal-delay-2">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">💻</div>
+          <div class="skill-cat-name">Development</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">VB.Net</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">HTML / CSS / JS</span>
+          <span class="skill-tag">Desktop Dev</span>
+          <span class="skill-tag">XAMPP</span>
+          <span class="skill-tag">Visual Studio</span>
+          <span class="skill-tag">Netbeans</span>
+          <span class="skill-tag">VSCode</span>
+        </div>
+      </div>
+      <div class="glass-card skill-category reveal reveal-delay-3">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🔧</div>
+          <div class="skill-cat-name">Systems & Analysis</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">BPMN</span>
+          <span class="skill-tag">UML</span>
+          <span class="skill-tag">Database Design</span>
+          <span class="skill-tag">System Analysis</span>
+          <span class="skill-tag">Bizagi</span>
+          <span class="skill-tag">Draw.io</span>
+          <span class="skill-tag">QGIS</span>
+          <span class="skill-tag">Spatial Analysis</span>
+        </div>
+      </div>
+      <div class="glass-card skill-category reveal reveal-delay-1">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🗂️</div>
+          <div class="skill-cat-name">Productivity</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Microsoft Office</span>
+          <span class="skill-tag">Project Management</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">Mendeley</span>
+          <span class="skill-tag">NLP / Sentiment</span>
+        </div>
+      </div>
+      <div class="glass-card skill-category reveal reveal-delay-2">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🤝</div>
+          <div class="skill-cat-name">Soft Skills</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Quick Learner</span>
+          <span class="skill-tag">Attention to Detail</span>
+          <span class="skill-tag">Time Management</span>
+          <span class="skill-tag">Communication</span>
+          <span class="skill-tag">Leadership</span>
+          <span class="skill-tag">Teamwork</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     EXPERIENCE
+═══════════════════════════════════════ -->
+<section id="experience">
+  <div class="section">
+    <div class="section-label">Work History</div>
+    <h2 class="section-title">Work <span class="grad-text">Experience</span></h2>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="glass-card exp-card">
+          <div class="exp-top">
+            <div class="exp-role">Data Administration Intern</div>
+            <div class="exp-date">Feb 2026 – Present</div>
+          </div>
+          <div class="exp-company">Direktorat Penjaminan Mutu, Universitas Bakrie</div>
+          <ul class="exp-desc">
+            <li>Assisted in administrative activities related to quality assurance document management: Manual Standard, E-Monitoring & Evaluation, and Management Risk.</li>
+            <li>Supported integration of quality documents into institutional systems; edited over 20 Manual Standard documents.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item reveal reveal-delay-1">
+        <div class="timeline-dot"></div>
+        <div class="glass-card exp-card">
+          <div class="exp-top">
+            <div class="exp-role">Staff Digital Marketing</div>
+            <div class="exp-date">Aug 2024 – May 2025</div>
+          </div>
+          <div class="exp-company">PT. Arfadia Digital Indonesia</div>
+          <ul class="exp-desc">
+            <li>Led SEO article optimization and publication pipeline.</li>
+            <li>Edited and improved 100+ articles, making content SEO-friendly and readable.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item reveal reveal-delay-2">
+        <div class="timeline-dot"></div>
+        <div class="glass-card exp-card">
+          <div class="exp-top">
+            <div class="exp-role">Lab Assistant · Pengantar Teknologi Informasi</div>
+            <div class="exp-date">Sep 2024 – Dec 2024</div>
+          </div>
+          <div class="exp-company">Universitas Bakrie</div>
+          <ul class="exp-desc">
+            <li>Assisted 43 students in Microsoft Office, Tableau, GitHub, Mendeley, and AIRPM.</li>
+            <li>Developed teaching, patience, and communication skills through hands-on guidance.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item reveal reveal-delay-2">
+        <div class="timeline-dot"></div>
+        <div class="glass-card exp-card">
+          <div class="exp-top">
+            <div class="exp-role">Operator · Kementrian UMKM (Olah Sismennas)</div>
+            <div class="exp-date">April 2024</div>
+          </div>
+          <div class="exp-company">Lemnashan</div>
+          <ul class="exp-desc">
+            <li>Created press releases, nodis, notulen, and Program Kegiatan Terpadu (PKT).</li>
+            <li>Responded to RIOS and prepared annual work recommendations and inter-ministerial inputs.</li>
+            <li>Managed all tasks with high speed and attention to detail under simulation pressure.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item reveal reveal-delay-3">
+        <div class="timeline-dot"></div>
+        <div class="glass-card exp-card">
+          <div class="exp-top">
+            <div class="exp-role">Digital Marketing Intern</div>
+            <div class="exp-date">May 2022 – Aug 2022</div>
+          </div>
+          <div class="exp-company">Positive Republic</div>
+          <ul class="exp-desc">
+            <li>Published 1000+ articles for SEO performance, improving online reach.</li>
+            <li>Learned keyword research, content structuring, and digital publication techniques.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     PROJECTS · ORGANIZED BY CATEGORY
+═══════════════════════════════════════ -->
+<section id="projects">
+  <div class="section">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">My <span class="grad-text">Projects</span></h2>
+
+    <!-- ─── Category: BI & Analytics ─── -->
+    <div class="category-block" id="cat-bi-analytics">
+      <div class="category-header">
+        <div class="category-icon">📊</div>
+        <div>
+          <h3>Business Intelligence & Analytics</h3>
+          <p>Data-driven dashboards, analysis, and visualization projects</p>
+        </div>
+      </div>
+      <div class="projects-grid">
+
+        <div class="glass-card project-card reveal" data-project="bi-dashboard-sales">
+                    <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="asset/bi/sales.png" alt="Sales Dashboard Overview"/></div>
+              <div class="carousel-slide"><img src="asset/bi/salesper_01.png" alt="Sales Dashboard Detail 1"/></div>
+              <div class="carousel-slide"><img src="asset/bi/salesper_02.png" alt="Sales Dashboard Detail 2"/></div>
+              <div class="carousel-slide"><img src="asset/bi/salesper_03.png" alt="Sales Dashboard Detail 3"/></div>
+            </div>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+            </div>
+          </div>
+        <div class="project-overlay-badges">
+            <span class="project-type-badge badge-ind">💡 Individual</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Sales Performance Dashboard with Drilling Analysis</h3>
+            <p class="project-desc">Built an interactive Power BI dashboard to analyze retail sales performance, incorporating drill-down capabilities for multi-level insights across categories, regions, and time periods.</p>
+            <div class="project-output">
+              <div class="project-output-label">Output</div>
+              <p>Interactive Power BI dashboard with drilling analysis, visual KPIs, and trend identification.</p>
+            </div>
+            <div class="project-meta-row">
+              <span class="project-role-tag">📈 Data Analyst</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">Power BI</span><span class="tech-pill">Data Viz</span><span class="tech-pill">Drill-Down</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('bi-dashboard-sales')">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal reveal-delay-1" data-project="bi-dashboard-jobs">
+                    <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="asset/bi/jobapplication.png" alt="Job Application Dashboard"/></div>
+            </div>
+          </div>
+        <div class="project-overlay-badges">
+            <span class="project-type-badge badge-ind">💡 Individual</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Job Application Analysis Dashboard with Star Schema</h3>
+            <p class="project-desc">Designed a star-schema data model and built a dashboard to analyze job application data, tracking metrics like application volume, response rates, and hiring pipeline.</p>
+            <div class="project-output">
+              <div class="project-output-label">Output</div>
+              <p>Star-schema data model and analytical dashboard with comprehensive job market insights.</p>
+            </div>
+            <div class="project-meta-row">
+              <span class="project-role-tag">📈 BI Analyst</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">Star Schema</span><span class="tech-pill">Power BI</span><span class="tech-pill">Data Modeling</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('bi-dashboard-jobs')">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal reveal-delay-2" data-project="bi-clustering">
+                    <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="asset/bi/ekonomi.png" alt="Economy vs Happiness Clustering"/></div>
+            </div>
+          </div>
+        <div class="project-overlay-badges">
+            <span class="project-type-badge badge-ind">💡 Individual</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Clustering Analysis: Economy vs. Happiness</h3>
+            <p class="project-desc">Performed clustering analysis on country-level data to explore the relationship between economic indicators and happiness scores, revealing distinct global patterns.</p>
+            <div class="project-output">
+              <div class="project-output-label">Output</div>
+              <p>Clustering model identifying country groupings, presented with visualizations and analytical insights.</p>
+            </div>
+            <div class="project-meta-row">
+              <span class="project-role-tag">📈 Data Analyst</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">Python</span><span class="tech-pill">Clustering</span><span class="tech-pill">Data Analysis</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('bi-clustering')">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal" data-project="bi-retail">
+                    <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="asset/bi/retail.png" alt="Retail Sales Dashboard"/></div>
+            </div>
+          </div>
+        <div class="project-overlay-badges">
+            <span class="project-type-badge badge-ind">💡 Individual</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Retail Sales Performance Dashboard</h3>
+            <p class="project-desc">Created a comprehensive dashboard tracking retail sales KPIs including revenue trends, product performance, and seasonal patterns.</p>
+            <div class="project-meta-row">
+              <span class="project-role-tag">📈 Data Analyst</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">Power BI</span><span class="tech-pill">Retail Analytics</span><span class="tech-pill">KPI Tracking</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('bi-retail')">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal reveal-delay-1" data-project="bi-eu-analysis">
+                    <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="asset/bi/lgbt.png" alt="LGBT Experiences EU Analysis"/></div>
+            </div>
+          </div>
+        <div class="project-overlay-badges">
+            <span class="project-type-badge badge-ind">💡 Individual</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Comparative Analysis of LGBT Experiences Across EU Countries</h3>
+            <p class="project-desc">Conducted a data-driven comparative study analyzing survey data across EU nations to understand variations in experiences, acceptance levels, and policy impacts.</p>
+            <div class="project-meta-row">
+              <span class="project-role-tag">📈 Data Analyst</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">Comparative Analysis</span><span class="tech-pill">Data Storytelling</span><span class="tech-pill">Survey Data</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('bi-eu-analysis')">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal reveal-delay-2" data-project="sentiment-analysis">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="asset/images/sentimen_analisis_fotokelompokdandosen.jpg" alt="Sentiment Analysis Team"/></div>
+            </div>
+          </div>
+          <div class="project-overlay-badges">
+            <span class="project-type-badge badge-team">🤝 Team</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Sentiment Analysis of Google & Shopee Reviews</h3>
+            <p class="project-desc">Analyzed customer sentiment from Google and Shopee product reviews using NLP techniques and Python to extract insights about user satisfaction and pain points.</p>
+            <div class="project-meta-row">
+              <span class="project-role-tag">📈 Data Analyst</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">Python</span><span class="tech-pill">NLP</span><span class="tech-pill">Sentiment Analysis</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('sentiment-analysis')">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── Category: GIS & Mapping ─── -->
+    <div class="category-block" id="cat-gis">
+      <div class="category-header">
+        <div class="category-icon">🗺️</div>
+        <div>
+          <h3>GIS & Spatial Analysis</h3>
+          <p>Geographic information systems and location-based analysis</p>
+        </div>
+      </div>
+      <div class="projects-grid">
+        <div class="glass-card project-card reveal" data-project="ikn-vegetation">
+                    <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="asset/ikn/01.png" alt="IKN Vegetation Analysis 1"/></div>
+              <div class="carousel-slide"><img src="asset/ikn/02.png" alt="IKN Vegetation Analysis 2"/></div>
+              <div class="carousel-slide"><img src="asset/ikn/03.png" alt="IKN Vegetation Analysis 3"/></div>
+              <div class="carousel-slide"><img src="asset/ikn/04.png" alt="IKN Vegetation Analysis 4"/></div>
+            </div>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+            </div>
+          </div>
+        <div class="project-overlay-badges">
+            <span class="project-type-badge badge-team">🤝 Team</span>
+            <a href="https://ibukotanusantara.codaxiom.com/" target="_blank" class="project-live-badge">🌐 Live Demo</a>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Vegetation Cover Change Analysis · IKN</h3>
+            <p class="project-desc">Spatiotemporal analysis of vegetation cover change in Ibu Kota Nusantara (IKN), comparing April 2024 and April 2026 using Sentinel-2 satellite imagery and the smileRandomForest classification algorithm in Google Earth Engine.</p>
+            <div class="project-output">
+              <div class="project-output-label">Output</div>
+              <p>Interactive WebGIS visualizing vegetation and land cover change across IKN over a two-year period.</p>
+            </div>
+            <div class="project-meta-row">
+              <span class="project-role-tag">🛰️ Ground Truth & Preprocessing</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">Google Earth Engine</span><span class="tech-pill">Sentinel-2</span><span class="tech-pill">Random Forest</span><span class="tech-pill">NDVI</span><span class="tech-pill">NDBI</span><span class="tech-pill">WebGIS</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('ikn-vegetation')">View Details</button>
+              <a href="https://ibukotanusantara.codaxiom.com/" target="_blank" class="btn-live">Live Demo →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal reveal-delay-1" data-project="flood-gis">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="asset/webgis/webgis_samarinda.png" alt="Flood Risk Map"/></div>
+            </div>
+          </div>
+          <div class="project-overlay-badges">
+            <span class="project-type-badge badge-ind">💡 Individual</span>
+            <a href="https://web-gis-samarinda-flood-emergency-s.vercel.app/index.html" target="_blank" class="project-live-badge">🌐 Live Demo</a>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Flood Risk Analysis WebGIS · Samarinda</h3>
+            <p class="project-desc">Built a geographic information system to classify flood risk zones in Samarinda using buffer analysis, stream proximity analysis, and spatial overlay methods. Risk zones are categorized into High, Medium, and Low with interactive map layers.</p>
+            <div class="project-output">
+              <div class="project-output-label">Output</div>
+              <p>Interactive WebGIS with layered flood risk zones, deployed on Vercel.</p>
+            </div>
+            <div class="project-meta-row">
+              <span class="project-role-tag">🗺️ GIS Analyst</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">QGIS</span><span class="tech-pill">WebGIS</span><span class="tech-pill">Buffer Analysis</span><span class="tech-pill">Proximity Analysis</span><span class="tech-pill">Spatial Overlay</span><span class="tech-pill">Vercel</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('flood-gis')">View Details</button>
+              <a href="https://web-gis-samarinda-flood-emergency-s.vercel.app/index.html" target="_blank" class="btn-live">Live Demo →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── Category: Application Development ─── -->
+    <div class="category-block" id="cat-application">
+      <div class="category-header">
+        <div class="category-icon">💻</div>
+        <div>
+          <h3>Application Development</h3>
+          <p>Desktop, mobile, and web applications</p>
+        </div>
+      </div>
+      <div class="projects-grid">
+        <div class="glass-card project-card reveal" data-project="desktop-vbnet">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><div class="project-thumb-placeholder">🖥️</div></div>
+            </div>
+          </div>
+          <div class="project-overlay-badges">
+            <span class="project-type-badge badge-ind">💡 Individual</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Desktop Application · VB.Net Database System</h3>
+            <p class="project-desc">Built a full desktop application with database integration for data management. Implemented CRUD operations, form validation, and reporting features.</p>
+            <div class="project-meta-row">
+              <span class="project-role-tag">💻 Developer</span>
+              <span class="project-year">2024</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">VB.Net</span><span class="tech-pill">MySQL</span><span class="tech-pill">XAMPP</span><span class="tech-pill">Visual Studio</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('desktop-vbnet')">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal reveal-delay-1" data-project="booq-oop">
+                    <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="asset/booq/00.png" alt="BooQ App Overview"/></div>
+              <div class="carousel-slide"><img src="asset/booq/01_usecase.png" alt="BooQ Use Case Diagram"/></div>
+              <div class="carousel-slide"><img src="asset/booq/02_classdiagram.png" alt="BooQ Class Diagram"/></div>
+              <div class="carousel-slide"><img src="asset/booq/05_database.png" alt="BooQ Database Design"/></div>
+            </div>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+            </div>
+          </div>
+        <div class="project-overlay-badges">
+            <span class="project-type-badge badge-team">🤝 Team</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">BooQ · Desktop Library Application (OOP)</h3>
+            <p class="project-desc">Developed a Java-based desktop library application as a final project for Object-Oriented Programming. Applied design patterns, inheritance, and encapsulation principles.</p>
+            <div class="project-meta-row">
+              <span class="project-role-tag">💻 Java Developer</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">Java</span><span class="tech-pill">OOP</span><span class="tech-pill">Netbeans</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('booq-oop')">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal reveal-delay-2" data-project="medimind">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="asset/medimind/01.png" alt="MediMind Mockup 1"/></div>
+              <div class="carousel-slide"><img src="asset/medimind/02.png" alt="MediMind Mockup 2"/></div>
+              <div class="carousel-slide"><img src="asset/medimind/03.png" alt="MediMind Mockup 3"/></div>
+              <div class="carousel-slide"><img src="asset/medimind/04.png" alt="MediMind Mockup 4"/></div>
+              <div class="carousel-slide"><img src="asset/images/medimind_fotokelompok.jpg" alt="MediMind Team"/></div>
+            </div>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+            </div>
+          </div>
+          <div class="project-overlay-badges">
+            <span class="project-type-badge badge-team">🤝 Team</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">MediMind · Mobile Health App</h3>
+            <p class="project-desc">Collaborated on designing and prototyping a mobile health application focused on medication reminders and health tracking, from user research through to UI/UX mockups and feature specification.</p>
+            <div class="project-meta-row">
+              <span class="project-role-tag">🎨 UI/UX Designer</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">Mobile App</span><span class="tech-pill">UI/UX</span><span class="tech-pill">Figma</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('medimind')">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal" data-project="portfolio-website">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><div class="project-thumb-placeholder">🌐</div></div>
+            </div>
+          </div>
+          <div class="project-overlay-badges">
+            <span class="project-type-badge badge-ind">💡 Individual</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Interactive Portfolio Website</h3>
+            <p class="project-desc">Designed and built this fully responsive portfolio landing page featuring glassmorphism aesthetics, animated aurora background, custom cursor, and dark/light mode toggle.</p>
+            <div class="project-meta-row">
+              <span class="project-role-tag">💻 Full Stack</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">HTML</span><span class="tech-pill">CSS</span><span class="tech-pill">JavaScript</span><span class="tech-pill">Canvas API</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('portfolio-website')">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── Category: Business ─── -->
+    <div class="category-block" id="cat-business">
+      <div class="category-header">
+        <div class="category-icon">💰</div>
+        <div>
+          <h3>Business & Entrepreneurship</h3>
+          <p>Startup ventures, business plans, and market analysis</p>
+        </div>
+      </div>
+      <div class="projects-grid">
+        <div class="glass-card project-card reveal" data-project="atethat">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="asset/atethat/01.png" alt="AteThat Business Deck 1"/></div>
+              <div class="carousel-slide"><img src="asset/atethat/02.png" alt="AteThat Business Deck 2"/></div>
+              <div class="carousel-slide"><img src="asset/images/atethat_kelompok.jpg" alt="AteThat Team"/></div>
+              <div class="carousel-slide"><img src="asset/images/atethat_fotosamaasesor.jpg" alt="AteThat with Assessor"/></div>
+            </div>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+            </div>
+          </div>
+          <div class="project-overlay-badges">
+            <span class="project-type-badge badge-team">🤝 Team</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">AteThat · Food Business Venture</h3>
+            <p class="project-desc">Developed a food business concept including competitor analysis, pitch deck, and go-to-market strategy. Presented the venture plan with financial projections and brand positioning.</p>
+            <div class="project-meta-row">
+              <span class="project-role-tag">📊 Business Analyst</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">Entrepreneurship</span><span class="tech-pill">Competitor Analysis</span><span class="tech-pill">Pitch Deck</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('atethat')">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal reveal-delay-1" data-project="saladish">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="asset/saladish/01.png" alt="Saladish Mockup"/></div>
+              <div class="carousel-slide"><img src="asset/images/saladish_fotokelompokdosen.jpg" alt="Saladish Team"/></div>
+            </div>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span>
+              <span class="carousel-dot"></span>
+            </div>
+          </div>
+          <div class="project-overlay-badges">
+            <span class="project-type-badge badge-team">🤝 Team</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Saladish · Healthy Food Business</h3>
+            <p class="project-desc">Created a complete business plan for a healthy food startup, including Business Model Canvas, financial analysis, marketing strategy, and a comprehensive final semester report.</p>
+            <div class="project-meta-row">
+              <span class="project-role-tag">📊 Business Analyst</span>
+              <span class="project-year">2024</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">Business Plan</span><span class="tech-pill">BMC</span><span class="tech-pill">Marketing</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('saladish')">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── Category: Process & BPMN ─── -->
+    <div class="category-block" id="cat-process">
+      <div class="category-header">
+        <div class="category-icon">🔄</div>
+        <div>
+          <h3>Process Modeling & Business Analysis</h3>
+          <p>BPMN diagrams, process redesign, and systems analysis</p>
+        </div>
+      </div>
+      <div class="projects-grid">
+        <div class="glass-card project-card reveal" data-project="bpmn-modeling">
+                    <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="asset/bpmn/01.png" alt="BPMN Diagram 1"/></div>
+              <div class="carousel-slide"><img src="asset/bpmn/02.png" alt="BPMN Diagram 2"/></div>
+              <div class="carousel-slide"><img src="asset/bpmn/03.png" alt="BPMN Diagram 3"/></div>
+              <div class="carousel-slide"><img src="asset/bpmn/04.png" alt="BPMN Diagram 4"/></div>
+            </div>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+            </div>
+          </div>
+        <div class="project-overlay-badges">
+            <span class="project-type-badge badge-team">🤝 Team</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">BPMN · Business Process Modeling</h3>
+            <p class="project-desc">Modeled essential business processes using BPMN 2.0 notation, covering both basic and advanced patterns including gateways, events, and sub-processes.</p>
+            <div class="project-meta-row">
+              <span class="project-role-tag">🔄 Process Analyst</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">BPMN 2.0</span><span class="tech-pill">Bizagi</span><span class="tech-pill">Draw.io</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('bpmn-modeling')">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal reveal-delay-1" data-project="bpr-salon">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="asset/images/NEEDS-CONFIRMATION-bpr-photo.jpg" alt="BPR Team with Lecturer"/></div>
+            </div>
+          </div>
+          <div class="project-overlay-badges">
+            <span class="project-type-badge badge-team">🤝 Team</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Business Process Redesign · Dyah's Salon</h3>
+            <p class="project-desc">Analyzed existing business processes at a real salon business, identified inefficiencies, and proposed a redesigned process model with improved workflows.</p>
+            <div class="project-meta-row">
+              <span class="project-role-tag">🔄 Process Analyst</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">Process Redesign</span><span class="tech-pill">BPR</span><span class="tech-pill">Case Study</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('bpr-salon')">View Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal reveal-delay-2" data-project="flowchart-analysis">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><div class="project-thumb-placeholder">📐</div></div>
+            </div>
+          </div>
+          <div class="project-overlay-badges">
+            <span class="project-type-badge badge-team">🤝 Team</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Flowchart & Systems Analysis Practicum</h3>
+            <p class="project-desc">Completed a series of practicum exercises in systems analysis, creating detailed flowcharts, data flow diagrams, and system requirement specifications.</p>
+            <div class="project-meta-row">
+              <span class="project-role-tag">🔧 Systems Analyst</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">Flowcharts</span><span class="tech-pill">DFD</span><span class="tech-pill">Systems Analysis</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('flowchart-analysis')">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── Category: Research ─── -->
+    <div class="category-block" id="cat-research">
+      <div class="category-header">
+        <div class="category-icon">📝</div>
+        <div>
+          <h3>Research & Papers</h3>
+          <p>Academic research and published papers</p>
+        </div>
+      </div>
+      <div class="projects-grid">
+        <div class="glass-card project-card reveal" data-project="testing-paper">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide"><div class="project-thumb-placeholder">📝</div></div>
+            </div>
+          </div>
+          <div class="project-overlay-badges">
+            <span class="project-type-badge badge-team">🤝 Team</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Testing & Implementation Research Paper</h3>
+            <p class="project-desc">Co-authored a research paper on software testing and implementation methodologies, covering test planning, execution strategies, and quality assurance frameworks.</p>
+            <div class="project-meta-row">
+              <span class="project-role-tag">📝 Researcher</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-tech"><span class="tech-pill">Research Paper</span><span class="tech-pill">Software Testing</span><span class="tech-pill">QA</span></div>
+            <div class="project-actions">
+              <button class="btn-detail" onclick="openModal('testing-paper')">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     EDUCATION
+═══════════════════════════════════════ -->
+<section id="education">
+  <div class="section">
+    <div class="section-label">Academic Background</div>
+    <h2 class="section-title">Education <span class="grad-text">Journey</span></h2>
+    <div class="edu-grid">
+      <div class="glass-card edu-card reveal">
+        <div style="font-size:2rem;margin-bottom:14px">🎓</div>
+        <div class="edu-degree">S1 – Sistem Informasi</div>
+        <div class="edu-school">Universitas Bakrie · Fakultas Teknik & Ilmu Komputer</div>
+        <div class="edu-meta">
+          <span class="edu-pill edu-year">2023 – Present</span>
+          <span class="edu-pill">Semester 6</span>
+          <span class="edu-pill">GPA 3.85</span>
+          <span class="edu-pill">159 SKS</span>
+        </div>
+        <p style="font-size:0.85rem;color:var(--text-secondary);margin-top:14px;line-height:1.7">
+          Studying programming, database management, business process, system design, and data visualization.
+          Active in student organizations and consistently achieving high academic results.
+        </p>
+      </div>
+      <div class="glass-card edu-card reveal reveal-delay-1">
+        <div style="font-size:2rem;margin-bottom:14px">🖥️</div>
+        <div class="edu-degree">Multimedia</div>
+        <div class="edu-school">SMKN 1 Gunungsindur</div>
+        <div class="edu-meta">
+          <span class="edu-pill edu-year">2020 – 2023</span>
+          <span class="edu-pill">Vocational</span>
+        </div>
+        <p style="font-size:0.85rem;color:var(--text-secondary);margin-top:14px;line-height:1.7">
+          Studied graphic design fundamentals, color theory, layout design, typography, and digital illustration.
+          Gained strong experience in visual communication that became the foundation of a design-oriented career.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     ORGANIZATIONS
+═══════════════════════════════════════ -->
+<section id="organization">
+  <div class="section">
+    <div class="section-label">Leadership & Activities</div>
+    <h2 class="section-title">Organization <span class="grad-text">& Events</span></h2>
+
+    <!-- SENAT BLOCK -->
+    <div class="org-block">
+      <div class="org-block-header">
+        <div class="org-block-icon" style="background:linear-gradient(135deg,var(--accent),var(--accent-hover))">🏛️</div>
+        <div>
+          <div class="org-block-title">Senat Mahasiswa</div>
+          <div class="org-block-meta">Universitas Bakrie · Staff Komisi V – Media & Creative · 2025/2026</div>
+        </div>
+      </div>
+      <div class="org-grid">
+        <div class="glass-card org-card reveal">
+          <div class="org-role">Creative · Ormawa Awards</div>
+          <div class="org-name">Program Kerja – Ormawa Awards</div>
+          <div class="org-period">2025</div>
+          <ul class="org-points">
+            <li>Produced animated opening bumper video for the Ormawa Awards event.</li>
+            <li>Designed event poster for Instagram feed publication.</li>
+            <li>Created a coming-soon teaser video for Instagram feed to build anticipation.</li>
+          </ul>
+        </div>
+        <div class="glass-card org-card reveal reveal-delay-1">
+          <div class="org-role">Creative · Kaderisasi</div>
+          <div class="org-name">Program Kerja – Kaderisasi</div>
+          <div class="org-period">2025</div>
+          <ul class="org-points">
+            <li>Designed Instagram feed poster for the Kaderisasi event.</li>
+            <li>Served as committee member for live report Instagram stories coverage.</li>
+            <li>Handled on-site documentation using camera during the event.</li>
+          </ul>
+        </div>
+        <div class="glass-card org-card reveal reveal-delay-2">
+          <div class="org-role">Coordinator Creative · PKM</div>
+          <div class="org-name">Program Kerja – PKM (Program Kreativitas Mahasiswa)</div>
+          <div class="org-period">2025</div>
+          <ul class="org-points">
+            <li>Led creative team: produced Instagram feed posters, story graphics, and Reels content.</li>
+            <li>Photographed and handled press release uploads for event documentation.</li>
+            <li>Designed registration poster, timeline infographic, and event extension notice.</li>
+            <li>Served as camera documentation crew during the socialization event.</li>
+          </ul>
+        </div>
+        <div class="glass-card org-card reveal reveal-delay-1">
+          <div class="org-role">Creative · Anti Korupsi</div>
+          <div class="org-name">Program Kerja – Anti Korupsi</div>
+          <div class="org-period">2025</div>
+          <ul class="org-points">
+            <li>Designed coming-soon teaser for Instagram feed.</li>
+            <li>Produced event poster for Instagram feed publication.</li>
+          </ul>
+        </div>
+        <div class="glass-card org-card reveal reveal-delay-2">
+          <div class="org-role">Creative – Social Media Content</div>
+          <div class="org-name">Senat Media & Branding</div>
+          <div class="org-period">2025</div>
+          <ul class="org-points">
+            <li>Built Senat profile: took and edited official member photos for Instagram feed.</li>
+            <li>Designed Open Recruitment poster for Senat Mahasiswa 2026/2027.</li>
+            <li>Created Instagram feed poster for Hari Batik Nasional.</li>
+            <li>Designed Instagram feed poster for Dirgahayu Republik Indonesia ke-80.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- HMSI BLOCK -->
+    <div class="org-block">
+      <div class="org-block-header">
+        <div class="org-block-icon" style="background:linear-gradient(135deg,var(--accent-2),#8A6428)">💻</div>
+        <div>
+          <div class="org-block-title">HMSI – Himpunan Mahasiswa Sistem Informasi</div>
+          <div class="org-block-meta">Universitas Bakrie · Secretary of Hubungan Masyarakat · 2024/2025</div>
+        </div>
+      </div>
+      <div class="org-grid">
+        <div class="glass-card org-card reveal">
+          <div class="org-role">Secretary of Hubungan Masyarakat</div>
+          <div class="org-name">HMSI – Kepengurusan 2024/2025</div>
+          <div class="org-period">2024/2025</div>
+          <ul class="org-points">
+            <li>Handled proposal writing, meeting minutes, and external communication.</li>
+            <li>Created Instagram posts for HMSI's official account to strengthen public presence.</li>
+          </ul>
+        </div>
+        <div class="glass-card org-card reveal reveal-delay-1">
+          <div class="org-role">Creative Division Lead</div>
+          <div class="org-name">Leadership Regeneration – HMSI</div>
+          <div class="org-period">May 2025</div>
+          <ul class="org-points">
+            <li>Led creative division for HMSI's leadership regeneration event.</li>
+            <li>Coordinated team to ensure all visual output matched event theme and timeline.</li>
+            <li>Gave feedback and guided creative decisions throughout production.</li>
+          </ul>
+        </div>
+        <div class="glass-card org-card reveal reveal-delay-2">
+          <div class="org-role">Secretary</div>
+          <div class="org-name">SIF Award – HMSI</div>
+          <div class="org-period">May 2025</div>
+          <ul class="org-points">
+            <li>Wrote the event proposal and Laporan Pertanggung Jawaban (LPJ).</li>
+            <li>Ensured all official documents were well-structured and presentation-ready.</li>
+          </ul>
+        </div>
+        <div class="glass-card org-card reveal reveal-delay-1">
+          <div class="org-role">Event Division</div>
+          <div class="org-name">Generator – HMSI</div>
+          <div class="org-period">April 2025</div>
+          <ul class="org-points">
+            <li>Supported planning and execution of the Generator event.</li>
+            <li>Coordinated logistics, schedules, and communication between speakers and participants.</li>
+          </ul>
+        </div>
+        <div class="glass-card org-card reveal reveal-delay-2">
+          <div class="org-role">Creative Division</div>
+          <div class="org-name">Open House – HMSI</div>
+          <div class="org-period">Sept 2024</div>
+          <ul class="org-points">
+            <li>Developed creative concepts for Instagram posts introducing HMSI 2024/2025 members.</li>
+            <li>Edited and finalized posts for the Human Resources (SDM) division.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     CERTIFICATIONS
+═══════════════════════════════════════ -->
+<section id="certifications">
+  <div class="section">
+    <div class="section-label">Credentials</div>
+    <h2 class="section-title">Professional <span class="grad-text">Certifications</span></h2>
+    <div class="certs-grid">
+      <div class="glass-card cert-detail-card reveal">
+        <div class="cert-detail-header">
+          <div class="cert-detail-icon">🏅</div>
+          <div>
+            <h3>BNSP · Business Intelligence Analyst</h3>
+            <span class="cert-issuer">Badan Nasional Sertifikasi Profesi</span>
+          </div>
+        </div>
+        <p class="cert-detail-desc">
+          National professional certification validating competency in business intelligence analysis.
+          Covers data collection, ETL processes, dashboard development, data modeling with star schema,
+          and presenting analytical insights to support strategic business decisions.
+        </p>
+        <div class="cert-proves">
+          <div class="cert-proves-label">Proves Competency In:</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Data Collection & ETL</span>
+            <span class="skill-tag">Dashboard Development</span>
+            <span class="skill-tag">Star Schema Modeling</span>
+            <span class="skill-tag">Business Reporting</span>
+            <span class="skill-tag">Data-Driven Decision Making</span>
+          </div>
+        </div>
+        <img src="sertifikasi/bia.png" alt="BNSP BIA Certificate" class="cert-image" loading="lazy"/>
+      </div>
+
+      <div class="glass-card cert-detail-card reveal reveal-delay-1">
+        <div class="cert-detail-header">
+          <div class="cert-detail-icon">🎨</div>
+          <div>
+            <h3>BNSP · Junior Graphic Designer</h3>
+            <span class="cert-issuer">Badan Nasional Sertifikasi Profesi</span>
+          </div>
+        </div>
+        <p class="cert-detail-desc">
+          National professional certification validating competency in graphic design fundamentals.
+          Covers visual communication principles, layout design, typography, color theory,
+          and proficiency in industry-standard design tools.
+        </p>
+        <div class="cert-proves">
+          <div class="cert-proves-label">Proves Competency In:</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Visual Communication</span>
+            <span class="skill-tag">Layout & Typography</span>
+            <span class="skill-tag">Color Theory</span>
+            <span class="skill-tag">Digital Illustration</span>
+            <span class="skill-tag">Design Software</span>
+          </div>
+        </div>
+        <img src="sertifikasi/jgd.png" alt="BNSP Junior Graphic Designer Certificate" class="cert-image" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     GALLERY
+═══════════════════════════════════════ -->
+<section id="gallery">
+  <div class="section">
+    <div class="section-label">Visual Showcase</div>
+    <h2 class="section-title">Gallery <span class="grad-text">Photos</span></h2>
+    <p class="gallery-intro">A glimpse into events, projects, and moments that have shaped my journey, from organizational activities to project defenses with lecturers.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item glass-card reveal">
+        <img src="asset/images/senat_kaderisasi.jpg" alt="Senat Kaderisasi Event" loading="lazy"/>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label">Senat · Kaderisasi Event</div>
+      </div>
+      <div class="gallery-item glass-card reveal reveal-delay-1">
+        <img src="asset/images/senat_sidangpleno.jpg" alt="Senat Sidang Pleno" loading="lazy"/>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label">Senat · Sidang Pleno</div>
+      </div>
+      <div class="gallery-item glass-card reveal reveal-delay-2">
+        <img src="asset/images/senat_shootvideoprofile.jpg" alt="Senat Video Profile Shoot" loading="lazy"/>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label">Senat · Video Profile Shoot</div>
+      </div>
+      <div class="gallery-item glass-card reveal reveal-delay-3">
+        <img src="asset/images/senat_takefotoprofile.jpg" alt="Senat Official Photo Session" loading="lazy"/>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label">Senat · Official Photo Session</div>
+      </div>
+      <div class="gallery-item glass-card reveal">
+        <img src="asset/images/booq_oop_fotosamadosen.jpg" alt="BooQ Team After UAS" loading="lazy"/>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label">BooQ OOP · Team with Lecturer After UAS</div>
+      </div>
+      <div class="gallery-item glass-card reveal reveal-delay-1">
+        <img src="asset/images/NEEDS-CONFIRMATION-bpr-photo.jpg" alt="BPR Dyah's Salon Team" loading="lazy"/>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label">BPR Dyah's Salon · Team with Lecturer</div>
+      </div>
+      <div class="gallery-item glass-card reveal reveal-delay-2">
+        <img src="asset/images/atethat_kelompok.jpg" alt="AteThat Team" loading="lazy"/>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label">AteThat · Team Photo After UAS</div>
+      </div>
+      <div class="gallery-item glass-card reveal reveal-delay-3">
+        <img src="asset/images/saladish_fotokelompokdosen.jpg" alt="Saladish Team" loading="lazy"/>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label">Saladish · Team with Lecturer</div>
+      </div>
+      <div class="gallery-item glass-card reveal">
+        <img src="asset/images/bnsp_bia_training.jpg" alt="BNSP BIA Training" loading="lazy"/>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label">BNSP · Business Intelligence Training</div>
+      </div>
+      <div class="gallery-item glass-card reveal reveal-delay-1">
+        <img src="asset/images/medimind_fotokelompok.jpg" alt="MediMind Team" loading="lazy"/>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label">MediMind · Team Photo</div>
+      </div>
+      <div class="gallery-item glass-card reveal reveal-delay-2">
+        <img src="asset/images/sentimen_analisis_fotokelompokdandosen.jpg" alt="Sentiment Analysis Team" loading="lazy"/>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label">Sentiment Analysis · Team with Lecturer</div>
+      </div>
+      <div class="gallery-item glass-card reveal reveal-delay-3">
+        <img src="asset/images/senat_videoprofile.jpg" alt="Senat Video Profile" loading="lazy"/>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label">Senat · Video Profile Production</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════ -->
+<section id="contact">
+  <div class="section">
+    <div class="section-label">Let's Connect</div>
+    <h2 class="section-title">Get in <span class="grad-text">Touch</span></h2>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-lead">
+          Open to internship opportunities, project collaborations, and creative partnerships.
+          Whether you have a question or just want to say hi. I'll do my best to respond!
+        </p>
+        <div class="contact-links">
+          <a href="mailto:najmakhonsa@gmail.com" class="contact-link">
+            <div class="contact-icon">📧</div>
+            najmakhonsa@gmail.com
+          </a>
+          <a href="tel:+6289537941677" class="contact-link">
+            <div class="contact-icon">📱</div>
+            +62 895 3794 16677
+          </a>
+          <a href="https://linkedin.com/in/najma-khonsa-tsabita" target="_blank" class="contact-link">
+            <div class="contact-icon">💼</div>
+            linkedin.com/in/najma-khonsa-tsabita
+          </a>
+          <a href="#" class="contact-link">
+            <div class="contact-icon">📍</div>
+            South Tangerang, Indonesia
+          </a>
+        </div>
+      </div>
+      <div class="glass-card contact-form-card reveal reveal-delay-1">
+        <div class="form-title">Send a Message</div>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-input" placeholder="Your name"/>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-input" placeholder="your@email.com"/>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea class="form-textarea" placeholder="Tell me about your project or opportunity..."></textarea>
+        </div>
+        <button class="form-submit" onclick="handleFormSubmit(this)">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">NKT. · Najma Khonsa Tsabita</div>
+  <div>Sistem Informasi · Universitas Bakrie · Angkatan 2023</div>
+  <div>© 2026</div>
+</footer>
+
+<!-- PROJECT DETAIL MODAL -->
+<div class="modal-overlay" id="project-modal">
+  <div class="modal-content glass-card">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <div id="modal-body">
+      <!-- Dynamic content loaded by JS -->
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
