@@ -1979,3 +1979,754 @@ footer {
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   PRINT / PDF
+   Optimized for A4 portfolio export
+═══════════════════════════════════════════════════════════ */
+
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+
+  /* ─────────────────────────────────────────────────────────
+     GLOBAL
+  ───────────────────────────────────────────────────────── */
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  html,
+  body {
+    width: 100%;
+    min-width: 0;
+    background: #ffffff !important;
+    color: #10162A !important;
+    font-size: 10pt;
+    overflow: visible !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    position: static;
+  }
+
+  main {
+    width: 100%;
+    overflow: visible !important;
+  }
+
+  section {
+    position: relative;
+    overflow: visible !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    break-inside: avoid;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     HIDE WEB-ONLY ELEMENTS
+  ───────────────────────────────────────────────────────── */
+
+  #main-nav,
+  #mobile-nav,
+  #cursor-dot,
+  #cursor-ring,
+  #aurora-canvas,
+  .scroll-hint,
+  .badge-pulse,
+  .carousel-nav,
+  .carousel-dots,
+  .project-actions,
+  .uml-filters,
+  .contact-form-card,
+  .modal-overlay,
+  .lightbox-overlay {
+    display: none !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     GENERAL SECTION LAYOUT
+  ───────────────────────────────────────────────────────── */
+
+  .section {
+    width: 100%;
+    max-width: none;
+    padding: 18mm 0 10mm !important;
+    margin: 0 !important;
+  }
+
+  section:not(#home) {
+    border-top: 1px solid #d8dce5 !important;
+  }
+
+  .section-label {
+    color: #3B4FC4 !important;
+    font-size: 8pt;
+    margin-bottom: 3mm;
+  }
+
+  .section-title {
+    color: #10162A !important;
+    font-size: 21pt;
+    margin-bottom: 9mm;
+  }
+
+  .grad-text {
+    background: none !important;
+    -webkit-text-fill-color: #3B4FC4 !important;
+    color: #3B4FC4 !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     HERO / COVER
+  ───────────────────────────────────────────────────────── */
+
+  #home {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 18mm 0 15mm !important;
+    display: block !important;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .hero-inner {
+    max-width: none;
+    width: 100%;
+    padding: 0 !important;
+
+    display: grid !important;
+    grid-template-columns: 1.25fr 0.75fr !important;
+    gap: 12mm !important;
+    align-items: center;
+  }
+
+  .hero-left {
+    order: 1 !important;
+  }
+
+  .hero-photo-wrap {
+    order: 2 !important;
+    width: 58mm !important;
+    max-width: 58mm !important;
+    height: 58mm !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-photo {
+    width: 88% !important;
+    height: 88% !important;
+    border: 2px solid #e5e7eb !important;
+    box-shadow: none !important;
+  }
+
+  .hero-photo-ring {
+    inset: -5mm !important;
+    border-color: #cbd1dc !important;
+  }
+
+  .hero-photo-ring2 {
+    inset: -9mm !important;
+    border-color: #e5e7eb !important;
+  }
+
+  .hero-photo-deco {
+    background: #ffffff !important;
+    color: #9C7027 !important;
+    border-color: #d8dce5 !important;
+    box-shadow: none !important;
+    font-size: 7.5pt;
+  }
+
+  .hero-badge {
+    color: #5b6475 !important;
+    border-color: #d8dce5 !important;
+    margin-bottom: 5mm;
+  }
+
+  .hero-name,
+  .hero-name-sub {
+    color: #10162A !important;
+    font-size: 31pt !important;
+  }
+
+  .typed-container {
+    color: #3B4FC4 !important;
+    font-size: 10pt;
+  }
+
+  .cursor {
+    display: none !important;
+  }
+
+  .hero-desc {
+    color: #4f596b !important;
+    max-width: 125mm;
+    font-size: 9.5pt;
+    margin-top: 3mm;
+  }
+
+  .hero-desc strong {
+    color: #10162A !important;
+  }
+
+  .hero-stats {
+    gap: 9mm;
+    margin-top: 7mm;
+    padding-top: 5mm;
+    border-color: #d8dce5 !important;
+  }
+
+  .stat-num {
+    color: #10162A !important;
+    font-size: 15pt;
+  }
+
+  .stat-label {
+    color: #687184 !important;
+    font-size: 7pt;
+  }
+
+  .hero-actions {
+    display: none !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     CARDS
+  ───────────────────────────────────────────────────────── */
+
+  .glass-card,
+  .uml-item {
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+
+    border: 1px solid #dfe3ea !important;
+    box-shadow: none !important;
+
+    color: #10162A !important;
+
+    transform: none !important;
+  }
+
+  .glass-card:hover {
+    background: #ffffff !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     ABOUT
+  ───────────────────────────────────────────────────────── */
+
+  #about {
+    page-break-after: auto;
+  }
+
+  .about-grid {
+    grid-template-columns: 1.3fr 1fr !important;
+    gap: 7mm !important;
+  }
+
+  .about-bio,
+  .role-desc,
+  .exp-desc li,
+  .project-desc,
+  .cert-detail-desc,
+  .org-points li {
+    color: #4f596b !important;
+  }
+
+  .about-row {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .field-label,
+  .gpa-label,
+  .stat-label,
+  .cert-issuer,
+  .org-period,
+  .project-year {
+    color: #687184 !important;
+  }
+
+  .field-val,
+  .about-name,
+  .gpa-num,
+  .cert-title {
+    color: #10162A !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     ROLES / SKILLS / EDUCATION
+  ───────────────────────────────────────────────────────── */
+
+  .roles-grid,
+  .skills-grid,
+  .edu-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 5mm !important;
+  }
+
+  .role-card,
+  .skill-cat,
+  .edu-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .role-title,
+  .skill-cat-name,
+  .edu-degree {
+    color: #10162A !important;
+  }
+
+  .skill-tag,
+  .edu-pill {
+    background: #f5f6f8 !important;
+    color: #4f596b !important;
+    border-color: #dfe3ea !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     EXPERIENCE
+  ───────────────────────────────────────────────────────── */
+
+  .timeline {
+    max-width: none;
+  }
+
+  .timeline-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 6mm;
+  }
+
+  .timeline::before {
+    background: #d8dce5 !important;
+  }
+
+  .timeline-dot {
+    background: #ffffff !important;
+    border-color: #3B4FC4 !important;
+  }
+
+  .exp-role {
+    color: #10162A !important;
+  }
+
+  .exp-date {
+    color: #3B4FC4 !important;
+  }
+
+  .exp-company {
+    color: #5f6879 !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     PROJECTS
+  ───────────────────────────────────────────────────────── */
+
+  #projects {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .category-block {
+    page-break-inside: auto;
+    break-inside: auto;
+    margin-bottom: 9mm;
+  }
+
+  .category-header {
+    page-break-after: avoid;
+    break-after: avoid;
+    border-color: #d8dce5 !important;
+  }
+
+  .category-header h3 {
+    color: #10162A !important;
+  }
+
+  .category-header p {
+    color: #687184 !important;
+  }
+
+  .category-icon {
+    background: #eef1ff !important;
+  }
+
+  .projects-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 5mm !important;
+  }
+
+  .project-card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     PROJECT CAROUSELS
+     
+     Only the first screenshot is printed.
+     Prevents all carousel slides from stacking.
+  ───────────────────────────────────────────────────────── */
+
+  .carousel-container {
+    height: 52mm !important;
+    aspect-ratio: auto !important;
+    overflow: hidden !important;
+    background: #f5f6f8 !important;
+  }
+
+  .carousel-track {
+    display: block !important;
+    height: 100% !important;
+    transform: none !important;
+  }
+
+  .carousel-slide {
+    display: none !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 100% !important;
+  }
+
+  .carousel-slide:first-child {
+    display: block !important;
+  }
+
+  .carousel-slide:first-child img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .carousel-slide:first-child img.img-contain {
+    object-fit: contain !important;
+    background: #f5f6f8 !important;
+  }
+
+  .project-overlay-badges {
+    top: 3mm;
+    left: 3mm;
+  }
+
+  .project-type-badge,
+  .project-live-badge {
+    color: #ffffff !important;
+    text-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .project-body {
+    padding: 5mm !important;
+  }
+
+  .project-name {
+    color: #10162A !important;
+    font-size: 10pt;
+  }
+
+  .project-desc {
+    font-size: 8pt;
+    line-height: 1.5;
+  }
+
+  .project-output {
+    background: #f5f6f8 !important;
+  }
+
+  .project-output p {
+    color: #4f596b !important;
+  }
+
+  .project-tech {
+    margin-bottom: 0 !important;
+  }
+
+  .tech-pill {
+    color: #5f6879 !important;
+    border-color: #dfe3ea !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     DIAGRAMS / UML
+  ───────────────────────────────────────────────────────── */
+
+  #diagrams {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .uml-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 5mm !important;
+  }
+
+  .uml-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .uml-item img {
+    width: 100% !important;
+    height: 55mm !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    background: #f5f6f8 !important;
+  }
+
+  .uml-item-label {
+    color: #4f596b !important;
+    border-color: #dfe3ea !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     CERTIFICATIONS
+  ───────────────────────────────────────────────────────── */
+
+  .certs-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 5mm !important;
+  }
+
+  .cert-detail {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .cert-detail-header h3 {
+    color: #10162A !important;
+  }
+
+  .cert-detail-desc {
+    color: #4f596b !important;
+  }
+
+  .cert-image {
+    max-height: 65mm !important;
+    object-fit: contain !important;
+    background: #f5f6f8 !important;
+    border-color: #dfe3ea !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     ORGANIZATIONS
+  ───────────────────────────────────────────────────────── */
+
+  .org-block {
+    page-break-inside: auto;
+    break-inside: auto;
+    margin-bottom: 8mm;
+  }
+
+  .org-block-header {
+    page-break-after: avoid;
+    break-after: avoid;
+    border-color: #d8dce5 !important;
+  }
+
+  .org-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 4mm !important;
+  }
+
+  .org-card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .org-name,
+  .org-block-title {
+    color: #10162A !important;
+  }
+
+  .org-points li {
+    color: #4f596b !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     GALLERY
+  ───────────────────────────────────────────────────────── */
+
+  #gallery {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .gallery-intro {
+    color: #4f596b !important;
+  }
+
+  .gallery-grid {
+    column-count: 3 !important;
+    column-gap: 4mm !important;
+  }
+
+  .gallery-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 4mm;
+  }
+
+  .gallery-overlay {
+    display: none !important;
+  }
+
+  .gallery-item img {
+    transform: none !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     CONTACT
+  ───────────────────────────────────────────────────────── */
+
+  #contact {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 6mm !important;
+  }
+
+  .contact-lead {
+    color: #4f596b !important;
+  }
+
+  .contact-links {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 3mm !important;
+  }
+
+  .contact-link {
+    background: #f5f6f8 !important;
+    border-color: #dfe3ea !important;
+    color: #10162A !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     FOOTER
+  ───────────────────────────────────────────────────────── */
+
+  footer {
+    padding: 8mm 0 4mm !important;
+    border-top: 1px solid #d8dce5 !important;
+    color: #687184 !important;
+  }
+
+  .footer-inner {
+    max-width: none;
+    padding-bottom: 5mm;
+  }
+
+  .footer-thanks {
+    color: #10162A !important;
+  }
+
+  .footer-link {
+    color: #4f596b !important;
+  }
+
+  .footer-doc-btns {
+    display: none !important;
+  }
+
+  .footer-bottom {
+    border-color: #d8dce5 !important;
+    color: #687184 !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     REVEAL ANIMATIONS
+     Your JS may leave elements invisible during printing.
+  ───────────────────────────────────────────────────────── */
+
+  .reveal,
+  .reveal-delay-1,
+  .reveal-delay-2,
+  .reveal-delay-3,
+  .reveal-delay-4 {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     PAGE BREAK HELPERS
+  ───────────────────────────────────────────────────────── */
+
+  #education,
+  #roles,
+  #skills {
+    page-break-inside: auto;
+  }
+
+  .role-card,
+  .skill-cat,
+  .edu-card,
+  .cert-detail,
+  .org-card,
+  .project-card,
+  .uml-item,
+  .gallery-item {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+
+  /* ─────────────────────────────────────────────────────────
+     PRINT URL BEHAVIOR
+     
+     Don't append URLs after every link.
+     Portfolio already shows readable link text.
+  ───────────────────────────────────────────────────────── */
+
+  a[href]::after {
+    content: none !important;
+  }
+}
