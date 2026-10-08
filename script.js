@@ -1603,5 +1603,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    /* Tempel di PALING BAWAH script.js */
+(function () {
+  function preparePrint() {
+    // 1. Muat semua gambar yang masih lazy-load
+    document.querySelectorAll('img[loading="lazy"]').forEach(function (img) {
+      img.loading = 'eager';
+    });
+
+    // 2. Angka statistik langsung ke nilai akhir (bukan 0)
+    document.querySelectorAll('.stat-num[data-count]').forEach(function (el) {
+      var n = parseFloat(el.dataset.count);
+      var d = parseInt(el.dataset.decimals || '0', 10);
+      el.textContent = n.toFixed(d) + (el.dataset.suffix || '');
+    });
+
+    // 3. Bar IPK terisi (3.86 dari 4.00)
+    var bar = document.getElementById('gpa-bar');
+    if (bar) bar.style.width = (3.86 / 4 * 100) + '%';
+
+    // 4. Semua elemen reveal ditampilkan
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('visible');
+    });
+  }
+
+  window.addEventListener('beforeprint', preparePrint);
+})();
+
 
 });
